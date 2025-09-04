@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leo Baterias</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0d0d0d;
-            color: #f0f0f0;
+            background: linear-gradient(to bottom right, #f8f8f8, #f0f0f0);
+            color: #333333;
             overflow-x: hidden;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Poppins', sans-serif;
         }
 
         .section-transition {
@@ -21,6 +29,7 @@
             opacity: 0;
             transform: translateY(20px);
         }
+
         .section-transition.is-visible {
             opacity: 1;
             transform: translateY(0);
@@ -31,16 +40,20 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         .logo-container {
-            width: 250px;
+            width: 285px;
             height: auto;
         }
 
-        /* SVG logo inline */
         .logo-container svg {
             width: 100%;
             height: 100%;
@@ -54,63 +67,70 @@
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.05);
             }
+
             100% {
                 transform: scale(1);
             }
         }
     </style>
 </head>
+
 <body class="antialiased">
 
     <!-- Header -->
-    <header class="w-full py-6 sm:py-8 md:py-12 bg-black bg-opacity-80 fixed top-0 z-50 backdrop-blur-sm">
-        <div class="container mx-auto px-4 flex justify-center items-center">
-            <!-- Logo with SVG -->
-            <div class="logo-container">
-                <svg width="250" height="100" viewBox="0 0 250 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Fundo da bateria -->
-                    <rect x="0" y="0" width="100" height="60" rx="10" fill="#E53E3E"/>
-                    <!-- Terminal positivo -->
-                    <rect x="20" y="-10" width="60" height="15" rx="5" fill="#E53E3E"/>
-                    <!-- Raio -->
-                    <path d="M55 5L45 30L60 30L50 55L55 55L65 30L50 30L60 5L55 5Z" fill="#F6E05E"/>
-                    <!-- Letras L e O na bateria -->
-                    <text x="25" y="35" font-family="Inter, sans-serif" font-weight="bold" font-size="20" fill="#F0F0F0">L</text>
-                    <text x="75" y="35" font-family="Inter, sans-serif" font-weight="bold" font-size="20" fill="#F0F0F0">O</text>
-
-                    <!-- Textos LEO BATERIAS -->
-                    <text x="120" y="30" font-family="Inter, sans-serif" font-weight="bold" font-size="40" fill="#E53E3E">LEO</text>
-                    <text x="120" y="70" font-family="Inter, sans-serif" font-weight="bold" font-size="30" fill="#F0F0F0">BATERIAS</text>
+    <header class="w-full h-20 bg-white bg-opacity-90 fixed top-0 z-50 backdrop-blur-sm shadow-md">
+        <div class="container mx-auto h-full flex justify-center items-center">
+            <div class="h-16 flex items-center">
+                <svg class="h-full w-auto" viewBox="0 0 250 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0" y="0" width="100" height="60" rx="10" fill="#E53E3E" />
+                    <rect x="20" y="-10" width="60" height="15" rx="5" fill="#E53E3E" />
+                    <path d="M55 5L45 30L60 30L50 55L55 55L65 30L50 30L60 5L55 5Z" fill="#F6E05E" />
+                    <text x="25" y="35" font-family="Inter, sans-serif" font-weight="bold" font-size="20"
+                        fill="#F0F0F0">L</text>
+                    <text x="75" y="35" font-family="Inter, sans-serif" font-weight="bold" font-size="20"
+                        fill="#F0F0F0">O</text>
+                    <text x="120" y="30" font-family="Poppins, sans-serif" font-weight="bold" font-size="35"
+                        fill="#E53E3E">LEO</text>
+                    <text x="120" y="59" font-family="Poppins, sans-serif" font-weight="bold" font-size="25"
+                        fill="#333333">BATERIAS</text>
                 </svg>
             </div>
         </div>
     </header>
 
+
+
     <main class="relative z-10 pt-20">
         <!-- Hero Section -->
-        <section class="min-h-screen flex items-center justify-center p-4 text-center">
+        <section class="py-20 sm:py-24 px-4 text-center section-transition">
+
             <div class="max-w-4xl mx-auto section-transition">
-                <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight text-white mb-6 animate-pulse-slow">
+                <h1
+                    class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight text-gray-800 mb-6 animate-pulse-slow">
                     Energia e Confiança para o seu Veículo
                 </h1>
-                <p class="text-lg sm:text-xl md:text-2xl text-gray-300 font-light mb-8 max-w-2xl mx-auto">
-                    A Leo Baterias é a sua parceira em Frutal e região, oferecendo produtos de alta qualidade e um serviço ágil e confiável.
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-600 font-light mb-8 max-w-2xl mx-auto">
+                    A Leo Baterias é a sua parceira em Frutal e região, oferecendo produtos de alta qualidade e um
+                    serviço ágil e confiável.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="https://wa.me/5534999604499" target="_blank" class="w-full sm:w-auto bg-[#25D366] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#128C7E] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-                        <!-- WhatsApp SVG Icon -->
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.039 2c-5.514 0-9.986 4.472-9.986 9.986 0 1.742.457 3.454 1.328 4.975l-1.396 5.127 5.232-1.378c1.474.793 3.12 1.206 4.822 1.206 5.515 0 9.987-4.472 9.987-9.986s-4.472-9.986-9.987-9.986zm5.836 14.126c-.198.508-.949.771-1.637.954-.515.138-1.049.207-1.583.207-.514 0-.968-.069-1.365-.207-.464-.138-.838-.331-1.127-.58-.29-.248-.528-.58-.724-1.002-.196-.423-.326-.948-.39-1.57-.064-.622.046-1.168.163-1.637.116-.468.272-.857.469-1.169.213-.311.455-.53.725-.658.27-.128.57-.184.908-.184.288 0 .584.069.873.207.289.138.541.31.758.514.217.203.39.423.514.658.125.235.196.488.216.758.02.27-.058.54-.156.805-.098.265-.235.53-.414.794-.179.264-.389.497-.622.701-.233.203-.496.35-.785.448-.289.098-.558.147-.805.147z"/>
+                    <a href="https://wa.me/5534999604499" target="_blank"
+                        class="w-full sm:w-auto bg-[#25D366] text-white font-bold py-3 px-10 rounded-full shadow-lg hover:bg-[#128C7E] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12.039 2c-5.514 0-9.986 4.472-9.986 9.986 0 1.742.457 3.454 1.328 4.975l-1.396 5.127 5.232-1.378c1.474.793 3.12 1.206 4.822 1.206 5.515 0 9.987-4.472 9.987-9.986s-4.472-9.986-9.987-9.986z" />
                         </svg>
                         WhatsApp
                     </a>
-                    <a href="tel:+5534999604499" class="w-full sm:w-auto bg-gray-700 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-                        <!-- Phone SVG Icon -->
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 22c-2.761 0-5.45-1.138-7.391-3.078C10.638 16.95 9.5 14.261 9.5 11.5c0-1.298.261-2.58.784-3.79l-2.071-2.072c-1.89 2.016-2.913 4.606-2.913 7.424 0 3.737 1.488 7.234 4.187 9.933 2.699 2.699 6.196 4.187 9.933 4.187 2.818 0 5.408-1.023 7.424-2.913l-2.072-2.071c-1.21.523-2.492.784-3.79.784z"/>
+                    <a href="tel:+5534999604499"
+                        class="w-full sm:w-auto bg-gray-200 text-gray-800 font-bold py-3 px-10 rounded-full shadow-lg hover:bg-gray-300 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M20 22c-2.761 0-5.45-1.138-7.391-3.078C10.638 16.95 9.5 14.261 9.5 11.5c0-1.298.261-2.58.784-3.79l-2.071-2.072c-1.89 2.016-2.913 4.606-2.913 7.424 0 3.737 1.488 7.234 4.187 9.933 2.699 2.699 6.196 4.187 9.933 4.187 2.818 0 5.408-1.023 7.424-2.913l-2.072-2.071c-1.21.523-2.492.784-3.79.784z" />
                         </svg>
                         Ligar Agora
                     </a>
@@ -119,64 +139,61 @@
         </section>
 
         <!-- About Us Section -->
-        <section id="sobre" class="py-16 sm:py-24 px-4 bg-gray-900 section-transition">
+        <section id="sobre"
+            class="py-16 sm:py-24 px-4 bg-white shadow-lg rounded-3xl mx-4 sm:mx-8 md:mx-16 mb-8 section-transition">
             <div class="container mx-auto max-w-4xl text-center">
-                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Sobre a Leo Baterias</h2>
-                <p class="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
-                    A Leo Baterias é especializada na venda e instalação de baterias automotivas em Frutal e região. Trabalhamos com as principais marcas do mercado, oferecendo produtos de alta durabilidade e garantia. Nossa missão é atender com rapidez, qualidade e confiança, garantindo que seu veículo esteja sempre pronto para rodar.
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">Sobre a Leo Baterias</h2>
+                <p class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                    A Leo Baterias é especializada na venda e instalação de baterias automotivas em Frutal e região.
+                    Trabalhamos com as principais marcas do mercado, oferecendo produtos de alta durabilidade e
+                    garantia. Nossa missão é atender com rapidez, qualidade e confiança, garantindo que seu veículo
+                    esteja sempre pronto para rodar.
                 </p>
             </div>
         </section>
 
         <!-- Services Section -->
         <section id="servicos" class="py-16 sm:py-24 px-4 section-transition">
-            <div class="container mx-auto max-w-4xl">
-                <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">Nossos Serviços</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Card 1 -->
-                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                        <div class="text-white text-4xl mb-4 text-center">
-                            ⚡️
-                        </div>
-                        <h3 class="text-xl font-semibold text-white mb-2 text-center">Venda e Instalação</h3>
-                        <p class="text-gray-400 text-center">
-                            Trabalhamos com as melhores marcas, garantindo produtos de alta durabilidade e a instalação correta.
-                        </p>
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 text-center mb-12">Nossos Serviços</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-gray-800 text-4xl mb-4 text-center">⚡️</div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">Venda e Instalação</h3>
+                        <p class="text-gray-600 text-center">Trabalhamos com as melhores marcas, garantindo produtos de
+                            alta durabilidade e a instalação correta.</p>
                     </div>
-                    <!-- Service Card 2 -->
-                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                        <div class="text-white text-4xl mb-4 text-center">
-                            🔬
-                        </div>
-                        <h3 class="text-xl font-semibold text-white mb-2 text-center">Testes Gratuitos</h3>
-                        <p class="text-gray-400 text-center">
-                            Realizamos testes gratuitos para verificar a saúde da sua bateria, sem compromisso.
-                        </p>
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-gray-800 text-4xl mb-4 text-center">🔬</div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">Testes Gratuitos</h3>
+                        <p class="text-gray-600 text-center">Realizamos testes gratuitos para verificar a saúde da sua
+                            bateria, sem compromisso.</p>
                     </div>
-                    <!-- Service Card 3 -->
-                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-                        <div class="text-white text-4xl mb-4 text-center">
-                            🛵
-                        </div>
-                        <h3 class="text-xl font-semibold text-white mb-2 text-center">Atendimento Ágil</h3>
-                        <p class="text-gray-400 text-center">
-                            Para emergências, oferecemos um atendimento rápido e eficaz, com instalação no local.
-                        </p>
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-gray-800 text-4xl mb-4 text-center">🛵</div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center">Atendimento Ágil</h3>
+                        <p class="text-gray-600 text-center">Para emergências, oferecemos um atendimento rápido e
+                            eficaz, com instalação no local.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Call to Action Section -->
-        <section class="py-16 sm:py-24 px-4 bg-gray-900 text-center section-transition">
+        <!-- Call to Action -->
+        <section
+            class="py-16 sm:py-24 px-4 bg-white shadow-lg rounded-3xl mx-4 sm:mx-8 md:mx-16 mb-8 text-center section-transition">
             <div class="container mx-auto max-w-2xl">
-                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Pronto para rodar?</h2>
-                <p class="text-lg sm:text-xl text-gray-300 mb-8">
-                    Seja para carro, moto, caminhão ou veículos agrícolas, temos a bateria certa para você.
-                </p>
-                <a href="https://wa.me/5534999604499" target="_blank" class="bg-yellow-400 text-gray-900 font-bold py-3 px-10 rounded-full shadow-lg hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.039 2c-5.514 0-9.986 4.472-9.986 9.986 0 1.742.457 3.454 1.328 4.975l-1.396 5.127 5.232-1.378c1.474.793 3.12 1.206 4.822 1.206 5.515 0 9.987-4.472 9.987-9.986s-4.472-9.986-9.987-9.986zm5.836 14.126c-.198.508-.949.771-1.637.954-.515.138-1.049.207-1.583.207-.514 0-.968-.069-1.365-.207-.464-.138-.838-.331-1.127-.58-.29-.248-.528-.58-.724-1.002-.196-.423-.326-.948-.39-1.57-.064-.622.046-1.168.163-1.637.116-.468.272-.857.469-1.169.213-.311.455-.53.725-.658.27-.128.57-.184.908-.184.288 0 .584.069.873.207.289.138.541.31.758.514.217.203.39.423.514.658.125.235.196.488.216.758.02.27-.058.54-.156.805-.098.265-.235.53-.414.794-.179.264-.389.497-.622.701-.233.203-.496.35-.785.448-.289.098-.558.147-.805.147z"/>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">Pronto para rodar?</h2>
+                <p class="text-lg sm:text-xl text-gray-600 mb-8">Seja para carro, moto, caminhão ou veículos agrícolas,
+                    temos a bateria certa para você.</p>
+                <a href="https://wa.me/5534999604499" target="_blank"
+                    class="bg-yellow-400 text-gray-900 font-bold py-4 px-12 rounded-full shadow-lg hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12.039 2c-5.514 0-9.986 4.472-9.986 9.986 0 1.742.457 3.454 1.328 4.975l-1.396 5.127 5.232-1.378c1.474.793 3.12 1.206 4.822 1.206 5.515 0 9.987-4.472 9.987-9.986s-4.472-9.986-9.987-9.986z" />
                     </svg>
                     Entre em Contato
                 </a>
@@ -184,49 +201,29 @@
         </section>
 
         <!-- Footer -->
-        <footer class="bg-black py-8 px-4 text-center section-transition">
+        <footer class="bg-gray-200 py-8 px-4 text-center section-transition">
             <div class="container mx-auto">
-                <p class="text-sm text-gray-500 mb-2">
-                    &copy; 2024 Leo Baterias. Todos os direitos reservados.
-                </p>
-                <p class="text-sm text-gray-500">
-                    📍 Frutal, Minas Gerais
-                </p>
+                <p class="text-sm text-gray-600 mb-2">&copy; 2024 Leo Baterias. Todos os direitos reservados.</p>
+                <p class="text-sm text-gray-600">📍 Frutal, Minas Gerais</p>
             </div>
         </footer>
     </main>
 
     <script>
-        // JavaScript for scroll animations
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const sections = document.querySelectorAll('.section-transition');
-
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.2
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.2 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
             }, observerOptions);
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+            sections.forEach(section => observer.observe(section));
         });
 
-        // WhatsApp link logic
         const whatsappLink = document.querySelector('a[href^="https://wa.me"]');
         if (whatsappLink) {
-            whatsappLink.addEventListener('click', function(event) {
+            whatsappLink.addEventListener('click', function (event) {
                 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
                 if (!isMobile) {
-                    // Open in a new tab for desktop
                     event.preventDefault();
                     window.open(this.href, '_blank');
                 }
@@ -235,4 +232,5 @@
     </script>
 
 </body>
+
 </html>
